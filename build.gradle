@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
+}
+
+dependencies {// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.5'
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+}
+
+dependencies {// https://mvnrepository.com/artifact/bsh/bsh
+    compile group: 'bsh', name: 'bsh', version: '2.0b4'
+
+}
+test{
+    useTestNG()
+}
